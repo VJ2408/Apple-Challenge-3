@@ -1,5 +1,5 @@
 //
-//  activities.swift
+//  Activitysheet.swift
 //  Apple Challenge 3
 //
 //  Created by Vijai Adithya on 12/11/24.
@@ -8,14 +8,13 @@ import SwiftUI
 struct ActivitiesView: View {
     var body: some View {
         VStack {
-            Text("Welcome to Daily Activities!")
+            Text("Welcome to Activities!")
                 .font(.title)
                 .fontWeight(.bold)
                 .padding()
-            
-            // Placeholder for content on the new page
-            Text("This is where more details on daily activities would go.")
+         
+            Text("This is where you choose your activities.")
         }
-        .navigationTitle("Daily Activities")
+        .navigationTitle(" Activities")
     }
 }
