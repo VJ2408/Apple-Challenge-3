@@ -1,3 +1,10 @@
+//
+//  ContentView.swift
+//  Apple Challenge 3
+//
+//  Created by Vijai Adithya on 2/9/24.
+//
+
 import SwiftUI
 
 struct ContentView: View {
@@ -63,6 +70,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
+            //vertical scroll
             ScrollView {
                 VStack(spacing: 16) {
                     // Greeting
@@ -96,7 +104,8 @@ struct ContentView: View {
                                 .background(Color.gray)
                                 .padding(.bottom, 8)
                             
-                            // Horizontal scroll for exercises
+                            //horizontal scroll
+                            
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack(spacing: 16) {
                                     ForEach(group.exercises) { exercise in
@@ -129,7 +138,6 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationTitle("")
         }
     }
 }
