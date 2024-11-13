@@ -5,23 +5,21 @@
 import SwiftUI
 
 struct ExerciseSelectionView: View {
+   
     @State private var searchText = ""
 
-    var greeting: String { Time.shared.greeting }
-    var timeOfDay: String { Time.shared.timeOfDay }
-    var exercisesForTimeOfDay: [[Exercise]] { Time.shared.exercisesForTimeOfDay }
+    var greeting: String {Time.shared.greeting }
+    var timeOfDay: String {Time.shared.timeOfDay }
+    var exercisesForTimeOfDay:[[Exercise]] {Time.shared.exercisesForTimeOfDay}
 
     var filteredExercises: [Exercise] {
-        if searchText.isEmpty {
-            return exercisesForTimeOfDay.flatMap { $0 }
-        } else {
-            return exercisesForTimeOfDay.flatMap { $0 }.filter { exercise in
-                exercise.name.lowercased().contains(searchText.lowercased())
+        exercisesForTimeOfDay.flatMap{$0}
+            .filter {exercise in
+                searchText.isEmpty || exercise.name.lowercased().contains(searchText.lowercased())
             }
-        }
     }
 
-    var groupedExercises: [(intensity: String, exercises: [Exercise])] {
+    var groupedExercises: [(intensity:String, exercises:[Exercise])] {
         [
             ("Easy", filteredExercises.filter { $0.intensity == "Easy" }),
             ("Medium", filteredExercises.filter { $0.intensity == "Medium" }),
