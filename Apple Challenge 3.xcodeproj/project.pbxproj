@@ -11,6 +11,7 @@
 		B0094FFB2C8551B60026A675 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0094FFA2C8551B60026A675 /* ContentView.swift */; };
 		B0094FFD2C8551B70026A675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0094FFC2C8551B70026A675 /* Assets.xcassets */; };
 		B00950002C8551B70026A675 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0094FFF2C8551B70026A675 /* Preview Assets.xcassets */; };
+		B06029E62CE4FCC2000DC9BA /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06029E52CE4FCC2000DC9BA /* Time.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,11 +20,13 @@
 		B0094FFA2C8551B60026A675 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B0094FFC2C8551B70026A675 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0094FFF2C8551B70026A675 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B06029E52CE4FCC2000DC9BA /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		B06029C52CE32666000DC9BA /* ExerciseMain */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ExerciseMain; sourceTree = "<group>"; };
-		B06029DC2CE340F9000DC9BA /* Exercise Sheet */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Exercise Sheet"; sourceTree = "<group>"; };
+		B06029C52CE32666000DC9BA /* ExerciseData */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ExerciseData; sourceTree = "<group>"; };
+		B06029DC2CE340F9000DC9BA /* ExerciseInfoPage */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ExerciseInfoPage; sourceTree = "<group>"; };
+		B06029DD2CE4EBE6000DC9BA /* ExerciseSelectionPage */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ExerciseSelectionPage; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +61,10 @@
 			children = (
 				B0094FF82C8551B60026A675 /* Apple_Challenge_3App.swift */,
 				B0094FFA2C8551B60026A675 /* ContentView.swift */,
-				B06029DC2CE340F9000DC9BA /* Exercise Sheet */,
-				B06029C52CE32666000DC9BA /* ExerciseMain */,
+				B06029E52CE4FCC2000DC9BA /* Time.swift */,
+				B06029DD2CE4EBE6000DC9BA /* ExerciseSelectionPage */,
+				B06029DC2CE340F9000DC9BA /* ExerciseInfoPage */,
+				B06029C52CE32666000DC9BA /* ExerciseData */,
 				B0094FFC2C8551B70026A675 /* Assets.xcassets */,
 				B0094FFE2C8551B70026A675 /* Preview Content */,
 			);
@@ -90,8 +95,9 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				B06029C52CE32666000DC9BA /* ExerciseMain */,
-				B06029DC2CE340F9000DC9BA /* Exercise Sheet */,
+				B06029C52CE32666000DC9BA /* ExerciseData */,
+				B06029DC2CE340F9000DC9BA /* ExerciseInfoPage */,
+				B06029DD2CE4EBE6000DC9BA /* ExerciseSelectionPage */,
 			);
 			name = "Apple Challenge 3";
 			productName = "Apple Challenge 3";
@@ -148,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B06029E62CE4FCC2000DC9BA /* Time.swift in Sources */,
 				B0094FFB2C8551B60026A675 /* ContentView.swift in Sources */,
 				B0094FF92C8551B60026A675 /* Apple_Challenge_3App.swift in Sources */,
 			);
