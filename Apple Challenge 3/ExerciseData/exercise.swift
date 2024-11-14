@@ -14,13 +14,13 @@ struct Exercise: Identifiable {
     let intensity: String
     let time: String
     let instructions : String
-
-
+    
+    
     var image: Image {
         Image(systemName: symbol)
     }
-
-
+    
+    
     var symbolColor: Color {
         switch intensity {
         case "Easy":
@@ -37,62 +37,62 @@ struct Exercise: Identifiable {
 
 
 
-
-let exerciseyoga = [
+//data for morning, afternoon, night. categorised by difficulty
+let morningEz = [
     Exercise(symbol: "figure.mind.and.body", name: "Yoga", intensity: "Easy", time: "3 min", instructions: "Yololol"),
     Exercise(symbol: "figure.mind.and.body", name: "Running", intensity: "Easy", time: " 3 min", instructions: "Yololol"),
     Exercise(symbol: "figure.mind.and.body", name: "Walking", intensity: "Easy", time: "3 min", instructions: "Yololol"),
 ]
 
-let exerciserun = [
+let morningMid = [
     Exercise(symbol: "figure.mind.and.body", name: "Yoga", intensity: "Medium", time: "3 min", instructions: "Yololol"),
-    Exercise(symbol: "figure.mind.and.body", name: "Running", intensity: "Medium", time: "3 min", instructions: "Yololol"),
-    Exercise(symbol: "figure.mind.and.body", name: "Walking", intensity: "Medium", time: "3 min", instructions: "Yololol"),
+    Exercise(symbol: "figure.run", name: "Running", intensity: "Medium", time: "3 min", instructions: "Yololol"),
+    Exercise(symbol: "figure.walk", name: "Walking", intensity: "Medium", time: "3 min", instructions: "Yololol"),
 ]
 
-let exercisewalk = [
+let morningHard = [
     Exercise(symbol: "figure.mind.and.body", name: "Yoga", intensity: "Hard", time: "3 min", instructions: "Yololol"),
     Exercise(symbol: "figure.mind.and.body", name: "Running", intensity: "Hard", time: "3 min", instructions: "Yololol"),
     Exercise(symbol: "figure.mind.and.body", name: "Walking", intensity: "Hard", time: "3 min", instructions: "Yololol"),
 ]
 
-let exercisecalisthenics = [
+let afternoonEz = [
     Exercise(symbol: "figure.mind.and.body", name: "Yoga", intensity: "Easy", time: "3 min", instructions: "Yololol"),
     Exercise(symbol: "figure.mind.and.body", name: "Running", intensity: "Easy", time: "3 min", instructions: "Yololol"),
     Exercise(symbol: "figure.mind.and.body", name: "Walking", intensity: "Easy", time: "3 min", instructions: "Yololol"),
 ]
 
-let exercisestretches = [
+let afternoonMid = [
     Exercise(symbol: "figure.mind.and.body", name: "Yoga", intensity: "Medium", time: "3 min", instructions: "Yololol"),
     Exercise(symbol: "figure.mind.and.body", name: "Running", intensity: "Medium", time: "3 min", instructions: "Yololol"),
     Exercise(symbol: "figure.mind.and.body", name: "Walking", intensity: "Medium", time: "3 min", instructions: "Yololol"),
 ]
 
-let exercisesitups = [
+let afternoonHard = [
     Exercise(symbol: "figure.mind.and.body", name: "Yoga", intensity: "Hard", time: "3 min", instructions: "Yololol"),
     Exercise(symbol: "figure.mind.and.body", name: "Running", intensity: "Hard", time: "3 min", instructions: "Yololol"),
     Exercise(symbol: "figure.mind.and.body", name: "Walking", intensity: "Hard", time: "3 min", instructions: "Yololol")
 ]
 
-let exercisesquats = [
+let nightEz = [
     Exercise(symbol: "figure.mind.and.body", name: "Yoga", intensity: "Easy", time: "3 min", instructions: "Yololol"),
     Exercise(symbol: "figure.mind.and.body", name: "Running", intensity: "Easy", time: "3 min", instructions: "Yololol"),
     Exercise(symbol: "figure.mind.and.body", name: "Walking", intensity: "Easy", time: "3 min", instructions: "Yololol")
 ]
 
-let exercisepushups = [
+let nightMid = [
     Exercise(symbol: "figure.mind.and.body", name: "Yoga", intensity: "Medium", time: "3 min", instructions: "Yololol"),
     Exercise(symbol: "figure.mind.and.body", name: "Running", intensity: "Medium", time: "3 min", instructions: "Yololol"),
     Exercise(symbol: "figure.mind.and.body", name: "Walking", intensity: "Medium", time: "3 min", instructions: "Yololol")
 ]
 
-let exercisenope = [
+let nightHard = [
     Exercise(symbol: "figure.mind.and.body", name: "Walk", intensity: "Hard", time: "3 min", instructions: "Yololol"),
     Exercise(symbol: "figure.mind.and.body", name: "Running", intensity: "Hard", time: "3 min", instructions: "Yololol"),
     Exercise(symbol: "figure.mind.and.body", name: "Walking", intensity: "Hard", time: "3 min", instructions: "Yololol")
 ]
 
 
-let Morningexercises = [ exerciseyoga,exerciserun,exercisewalk]
-let Afternoonexercises = [ exercisesitups,exercisesquats,exercisepushups]
-let Eveningexercises = [ exercisestretches,exercisenope,exercisecalisthenics]
+let MorningExercises = [ morningEz, morningMid, morningHard ]
+let AfternoonExercises = [ afternoonEz, afternoonMid, afternoonHard ]
+let EveningExercises = [ nightEz, nightMid, nightHard ]
