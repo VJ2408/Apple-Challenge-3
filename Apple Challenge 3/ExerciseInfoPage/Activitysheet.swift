@@ -8,6 +8,7 @@ import SwiftUI
 
 struct ActivitiesView: View {
     let exercise: Exercise
+
     
     
     var body: some View {
