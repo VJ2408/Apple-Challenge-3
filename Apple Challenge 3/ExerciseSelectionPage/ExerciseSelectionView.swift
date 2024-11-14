@@ -40,6 +40,8 @@ struct ExerciseSelectionView: View {
                         .padding()
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding([.leading, .trailing], 16)
+                    
+                    
 
                     Text("\(timeOfDay) Activities")
                         .font(.system(size: 20, weight: .semibold))

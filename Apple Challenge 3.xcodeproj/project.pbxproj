@@ -27,6 +27,7 @@
 		B06029C52CE32666000DC9BA /* ExerciseData */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ExerciseData; sourceTree = "<group>"; };
 		B06029DC2CE340F9000DC9BA /* ExerciseInfoPage */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ExerciseInfoPage; sourceTree = "<group>"; };
 		B06029DD2CE4EBE6000DC9BA /* ExerciseSelectionPage */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ExerciseSelectionPage; sourceTree = "<group>"; };
+		B06029F02CE5B651000DC9BA /* ExerciseDemo */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ExerciseDemo; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +66,7 @@
 				B06029DD2CE4EBE6000DC9BA /* ExerciseSelectionPage */,
 				B06029DC2CE340F9000DC9BA /* ExerciseInfoPage */,
 				B06029C52CE32666000DC9BA /* ExerciseData */,
+				B06029F02CE5B651000DC9BA /* ExerciseDemo */,
 				B0094FFC2C8551B70026A675 /* Assets.xcassets */,
 				B0094FFE2C8551B70026A675 /* Preview Content */,
 			);
@@ -98,6 +100,7 @@
 				B06029C52CE32666000DC9BA /* ExerciseData */,
 				B06029DC2CE340F9000DC9BA /* ExerciseInfoPage */,
 				B06029DD2CE4EBE6000DC9BA /* ExerciseSelectionPage */,
+				B06029F02CE5B651000DC9BA /* ExerciseDemo */,
 			);
 			name = "Apple Challenge 3";
 			productName = "Apple Challenge 3";
