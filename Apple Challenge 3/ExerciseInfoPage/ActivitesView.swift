@@ -9,7 +9,7 @@ import SwiftUI
 struct ActivitiesView: View {
     let exercise: Exercise
     
-    @Binding var defaultExercise: [Exercise]
+    @Binding var defaultExercise: Exercise
     
     var body: some View {
         NavigationStack{
@@ -61,7 +61,7 @@ struct ActivitiesView: View {
                 VStack{
                     Button{
                         
-                        defaultExercise = [exercise]
+                        defaultExercise = exercise
                         
                     } label:{
                         ZStack{
@@ -104,6 +104,6 @@ struct ActivitiesView: View {
 }
 
 #Preview {
-    @Previewable @State var defaultExercise = [Exercise(symbolName: "", name: "", intensity: "", time: "", instructions: "", image: Image("placeholderImage"))]
+    @Previewable @State var defaultExercise = Exercise(symbolName: "", name: "", intensity: "", time: "", instructions: "", image: Image("placeholderImage"))
     ActivitiesView(exercise: Exercise(symbolName: "figure.mind.and.body", name: "activity", intensity: "Medium", time: "6 min", instructions: "yes", image: Image("placeholderImage")), defaultExercise: $defaultExercise)
 }

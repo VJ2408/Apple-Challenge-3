@@ -10,7 +10,7 @@ struct ExerciseSelectionView: View {
     
     let exercise: Exercise
     
-    @Binding var defaultExercise: [Exercise]
+    @Binding var defaultExercise: Exercise
     
     var greeting: String {Time.shared.greeting }
     var timeOfDay: String {Time.shared.timeOfDay }
@@ -44,22 +44,21 @@ struct ExerciseSelectionView: View {
                             .padding([.leading, .trailing], 16)
                             .padding(.top, 16)
                         
-                        ForEach(defaultExercise) { exercise in
                             VStack {
-                                Image(systemName: exercise.symbolName)
+                                Image(systemName: defaultExercise.symbolName)
                                     .font(.system(size: 60))
                                     .frame(width: 80, height: 80)
                                 
-                                Text(exercise.name)
+                                Text(defaultExercise.name)
                                     .font(.system(size: 16))
                                     .fontWeight(.semibold)
                                 
                                 HStack {
-                                    Text(exercise.intensity)
+                                    Text(defaultExercise.intensity)
                                         .font(.system(size: 14))
                                         .foregroundStyle(exercise.symbolColor)
                                     
-                                    Text(exercise.time)
+                                    Text(defaultExercise.time)
                                         .font(.system(size: 14))
                                 }
                                 .padding(.top, 8)
@@ -70,7 +69,6 @@ struct ExerciseSelectionView: View {
                             .cornerRadius(8)
                             .shadow(radius: 5)
                             .padding(.horizontal, 16)
-                        }
                         
                         
                         
@@ -141,6 +139,6 @@ struct ExerciseSelectionView: View {
 
 
 #Preview {
-    @Previewable @State var defaultExercise = [Exercise(symbolName: "", name: "", intensity: "", time: "", instructions: "", image: Image("placeholderImage"))]
+    @Previewable @State var defaultExercise = Exercise(symbolName: "", name: "", intensity: "", time: "", instructions: "", image: Image("placeholderImage"))
     ExerciseSelectionView(exercise: Exercise(symbolName: "figure.mind.and.body", name: "Default", intensity: "Medium", time: "3 min", instructions: "Placeholder", image: Image("placeholderImage")), defaultExercise: $defaultExercise)
 }
