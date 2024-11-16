@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var defaultExercise: Exercise = Exercise(symbolName: "", name: "", intensity: "", time: "", instructions: "", image: Image("placeholderImage"),videoName: "placeholderName")
+    @State var defaultExercise: Exercise = Exercise(symbolName: "questionmark", name: "You haven't set a default exercise yet!", intensity: "", time: "Tap on an exercise to set it as default!", instructions: "", image: Image("placeholderImage"), videoName: "placeholderName")
     
     var body: some View {
             NavigationStack {
