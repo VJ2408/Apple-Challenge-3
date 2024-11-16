@@ -38,7 +38,7 @@ struct Exercise: Identifiable {
 
 //data for morning, afternoon, night. categorised by difficulty
 let morningEz = [
-    Exercise(symbolName: "figure.mind.and.body", name: "Yoga", intensity: "Easy", time: "3 min", instructions: "Yololol", image: Image("placeholderImage")),
+    Exercise(symbolName: "figure.mind.and.body", name: "Meditating", intensity: "Easy", time: "3 min", instructions: "Yololol", image: Image("placeholderImage")),
     Exercise(symbolName: "figure.run", name: "Running", intensity: "Easy", time: " 3 min", instructions: "Yololol", image: Image("placeholderImage")),
     Exercise(symbolName: "figure.walk", name: "Walking", intensity: "Easy", time: "3 min", instructions: "Yololol", image: Image("placeholderImage")),
 ]

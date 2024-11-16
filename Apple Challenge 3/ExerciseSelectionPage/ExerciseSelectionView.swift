@@ -10,9 +10,6 @@ struct ExerciseSelectionView: View {
     
     let exercise: Exercise
     
-    let exercisedefault: [Exercise] = [
-        Exercise(symbolName: "figure.mind.and.body", name: "Yoga", intensity: "Easy", time: "3 min", instructions: "yayayay", image: Image("placeholderImage"))
-    ]
     
     var greeting: String {Time.shared.greeting }
     var timeOfDay: String {Time.shared.timeOfDay }
@@ -36,106 +33,106 @@ struct ExerciseSelectionView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                    VStack(spacing: 16) {
+                VStack(spacing: 16) {
+                    
+                    VStack(alignment: .leading, spacing: 16) {
                         
-                        VStack(alignment: .leading, spacing: 16) {
-                            
-                            Text("Default activity")
-                                .font(.system(size: 20, weight: .semibold))
-                                .foregroundColor(Color.gray.opacity(0.7))
-                                .padding([.leading, .trailing], 16)
-                                .padding(.top, 16)
-                            
-                            ForEach(exercisedefault) { exercise in
-                                VStack {
-                                    Image(systemName: exercise.symbolName)
-                                        .font(.system(size: 60))
-                                        .frame(width: 80, height: 80)
+                        Text("Default activity")
+                            .font(.system(size: 20, weight: .semibold))
+                            .foregroundColor(Color.gray.opacity(0.7))
+                            .padding([.leading, .trailing], 16)
+                            .padding(.top, 16)
+                        
+                        ForEach(exercisedefault) { exercise in
+                            VStack {
+                                Image(systemName: exercise.symbolName)
+                                    .font(.system(size: 60))
+                                    .frame(width: 80, height: 80)
+                                
+                                Text(exercise.name)
+                                    .font(.system(size: 16))
+                                    .fontWeight(.semibold)
+                                
+                                HStack {
+                                    Text(exercise.intensity)
+                                        .font(.system(size: 14))
+                                        .foregroundStyle(exercise.symbolColor)
                                     
-                                    Text(exercise.name)
-                                        .font(.system(size: 16))
-                                        .fontWeight(.semibold)
-                                    
-                                    HStack {
-                                        Text(exercise.intensity)                      
-                                            .font(.system(size: 14))
-                                            .foregroundStyle(exercise.symbolColor)
-                                        
-                                        Text(exercise.time)
-                                            .font(.system(size: 14))
-                                    }
-                                    .padding(.top, 8)
+                                    Text(exercise.time)
+                                        .font(.system(size: 14))
                                 }
-                                .padding()
-                                .frame(maxWidth: .infinity)
-                                .background(Color(uiColor: .white))
-                                .cornerRadius(8)
-                                .shadow(radius: 5)
-                                .padding(.horizontal, 16)
+                                .padding(.top, 8)
                             }
-                            
-                            
-                            
-                            
-                            Text("\(timeOfDay) activities")
-                                .font(.title)
-                                .fontWeight(.bold)
-                                .padding([.leading, .trailing], 16)
-                                .padding(.top, 16)
-                            
-                            ForEach(groupedExercises, id: \.intensity) { group in
-                                VStack(alignment: .leading) {
-                                    Text(group.intensity)
-                                        .font(.system(size: 20, weight: .semibold))
-                                        .foregroundColor(Color.gray.opacity(0.7))
-                                        .padding([.leading, .trailing], 16)
-                                        .padding(.top, 16)
-                                    
-                                    Divider()
-                                        .background(Color.gray)
-                                        .padding(.bottom, 8)
-                                    
-                                    ScrollView(.horizontal, showsIndicators: false) {
-                                        HStack(spacing: 16) {
-                                            ForEach(group.exercises) { exercise in
-                                                NavigationLink(destination: ActivitiesView(exercise: exercise)) {
-                                                    VStack {
-                                                        exercise.symbol
-                                                            .foregroundColor(exercise.symbolColor)
-                                                            .font(.system(size: 60))
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color(uiColor: .white))
+                            .cornerRadius(8)
+                            .shadow(radius: 5)
+                            .padding(.horizontal, 16)
+                        }
+                        
+                        
+                        
+                        
+                        Text("\(timeOfDay) activities")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .padding([.leading, .trailing], 16)
+                            .padding(.top, 16)
+                        
+                        ForEach(groupedExercises, id: \.intensity) { group in
+                            VStack(alignment: .leading) {
+                                Text(group.intensity)
+                                    .font(.system(size: 20, weight: .semibold))
+                                    .foregroundColor(Color.gray.opacity(0.7))
+                                    .padding([.leading, .trailing], 16)
+                                    .padding(.top, 16)
+                                
+                                Divider()
+                                    .background(Color.gray)
+                                    .padding(.bottom, 8)
+                                
+                                ScrollView(.horizontal, showsIndicators: false) {
+                                    HStack(spacing: 16) {
+                                        ForEach(group.exercises) { exercise in
+                                            NavigationLink(destination: ActivitiesView(exercise: exercise)) {
+                                                VStack {
+                                                    exercise.symbol
+                                                        .foregroundColor(exercise.symbolColor)
+                                                        .font(.system(size: 60))
+                                                    
+                                                    HStack {
+                                                        Text(exercise.name)
+                                                            .font(.system(size: 14))
+                                                            .lineLimit(1)
                                                         
-                                                        HStack {
-                                                            Text(exercise.name)
-                                                                .font(.system(size: 14))
-                                                                .lineLimit(1)
-                                                            
-                                                            Text(" \(exercise.time)")
-                                                                .font(.system(size: 14))
-                                                                .foregroundColor(.secondary)
-                                                                .lineLimit(1)
-                                                                .minimumScaleFactor(0.5)
-                                                        }
+                                                        Text(" \(exercise.time)")
+                                                            .font(.system(size: 14))
+                                                            .foregroundColor(.secondary)
+                                                            .lineLimit(1)
+                                                            .minimumScaleFactor(0.5)
                                                     }
-                                                    .padding()
-                                                    .frame(minWidth: 165, minHeight: 120)
-                                                    .background(Color(.white))
-                                                    .cornerRadius(8)
                                                 }
+                                                .padding()
+                                                .frame(minWidth: 165, minHeight: 120)
+                                                .background(Color(.white))
+                                                .cornerRadius(8)
                                             }
                                         }
-                                        .padding([.leading, .trailing], 16)
                                     }
+                                    .padding([.leading, .trailing], 16)
                                 }
                             }
                         }
                     }
-                    .navigationTitle("Activities")
-                    .toolbarBackground(
-                        Color(uiColor: .systemGray6),
-                        for: .navigationBar)
-                    .toolbarBackground(.visible, for: .navigationBar)
-                    .background(Color(uiColor: .systemGray6))
+                }
+                .navigationTitle("Activities")
+                .toolbarBackground(
+                    Color(uiColor: .systemGray6),
+                    for: .navigationBar)
+                .toolbarBackground(.visible, for: .navigationBar)
             }
+            .background(Color(uiColor: .systemGray6))
         }
         .searchable(text: $searchText)
     }

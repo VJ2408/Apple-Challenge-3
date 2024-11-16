@@ -24,7 +24,6 @@ class Time {
         let hour = Calendar.current.component(.hour, from: Date())
         switch hour {
         case 0..<12: return "Morning"
-        case 12..<17: return "Afternoon"
         default: return "Evening"
         }
     }

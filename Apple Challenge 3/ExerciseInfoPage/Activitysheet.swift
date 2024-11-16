@@ -8,9 +8,11 @@ import SwiftUI
 
 struct ActivitiesView: View {
     let exercise: Exercise
+    @State private var exercisedefault: [Exercise] = [
+        Exercise(symbolName: "figure.mind.and.body", name: "Yoga", intensity: "Easy", time: "3 min", instructions: "yayayay", image: Image("placeholderImage"))
+    ]
     
     var body: some View {
-        
         NavigationStack{
             ScrollView{
                 ZStack {
@@ -94,7 +96,6 @@ struct ActivitiesView: View {
                 .foregroundColor(Color(.systemGray4))
             }
             .ignoresSafeArea(.all)
-            
         }
     }
 }
