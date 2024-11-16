@@ -32,7 +32,6 @@ class Time {
     var exercisesForTimeOfDay: [[Exercise]] {
         switch timeOfDay {
         case "Morning": return MorningExercises
-        case "Afternoon": return AfternoonExercises
         default: return EveningExercises
         }
     }
