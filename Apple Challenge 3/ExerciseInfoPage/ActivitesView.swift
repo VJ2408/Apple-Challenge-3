@@ -83,7 +83,7 @@ struct ActivitiesView: View {
                     }
                     
                     NavigationLink{
-                        Activity()
+                        ExerciseDemo()
                     } label: {
                         ZStack{
                             RoundedRectangle(cornerRadius: 14)
