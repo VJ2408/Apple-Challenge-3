@@ -73,6 +73,8 @@ let nightHard = [
     Exercise(symbolName: "figure.mind.and.body", name: "Walking", intensity: "Hard", time: "3 min", instructions: "Yololol", image: Image("placeholderImage"))
 ]
 
+let defaultExercise = Exercise(symbolName: "figure.mind.and.body", name: "Walk", intensity: "Hard", time: "3 min", instructions: "Yololol", image: Image("placeholderImage"))
+
 
 let MorningExercises = [ morningEz, morningMid, morningHard ]
 let EveningExercises = [ nightEz, nightMid, nightHard ]

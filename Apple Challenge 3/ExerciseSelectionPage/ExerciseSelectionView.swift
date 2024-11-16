@@ -10,6 +10,7 @@ struct ExerciseSelectionView: View {
     
     let exercise: Exercise
     
+    @Binding var defaultExercise: Exercise
     
     var greeting: String {Time.shared.greeting }
     var timeOfDay: String {Time.shared.timeOfDay }
@@ -43,7 +44,7 @@ struct ExerciseSelectionView: View {
                             .padding([.leading, .trailing], 16)
                             .padding(.top, 16)
                         
-                        ForEach(exercisedefault) { exercise in
+                        ForEach(defaultExercise) { exercise in
                             VStack {
                                 Image(systemName: exercise.symbolName)
                                     .font(.system(size: 60))
@@ -95,7 +96,7 @@ struct ExerciseSelectionView: View {
                                 ScrollView(.horizontal, showsIndicators: false) {
                                     HStack(spacing: 16) {
                                         ForEach(group.exercises) { exercise in
-                                            NavigationLink(destination: ActivitiesView(exercise: exercise)) {
+                                            NavigationLink(destination: ActivitiesView(exercise: exercise, defaultExercise: defaultExercise)) {
                                                 VStack {
                                                     exercise.symbol
                                                         .foregroundColor(exercise.symbolColor)
@@ -140,5 +141,6 @@ struct ExerciseSelectionView: View {
 
 
 #Preview {
-    ExerciseSelectionView(exercise: Exercise(symbolName: "figure.mind.and.body", name: "Default", intensity: "Medium", time: "3 min", instructions: "Placeholder", image: Image("placeholderImage")))
+    @Previewable @State var defaultExercise = Exercise(symbolName: "", name: "", intensity: "", time: "", instructions: "", image: Image("placeholderImage"))
+    ExerciseSelectionView(exercise: Exercise(symbolName: "figure.mind.and.body", name: "Default", intensity: "Medium", time: "3 min", instructions: "Placeholder", image: Image("placeholderImage")), defaultExercise: $defaultExercise)
 }

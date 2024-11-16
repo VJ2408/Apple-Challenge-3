@@ -8,9 +8,8 @@ import SwiftUI
 
 struct ActivitiesView: View {
     let exercise: Exercise
-    @State private var exercisedefault: [Exercise] = [
-        Exercise(symbolName: "figure.mind.and.body", name: "Yoga", intensity: "Easy", time: "3 min", instructions: "yayayay", image: Image("placeholderImage"))
-    ]
+    
+    @Binding var defaultExercise: Exercise
     
     var body: some View {
         NavigationStack{
@@ -61,6 +60,9 @@ struct ActivitiesView: View {
             .overlay(alignment:.bottom){
                 VStack{
                     Button{
+                        
+                        defaultExercise = exercise
+                        
                     } label:{
                         ZStack{
                             RoundedRectangle(cornerRadius: 14)
@@ -101,5 +103,6 @@ struct ActivitiesView: View {
 }
 
 #Preview {
-    ActivitiesView(exercise: Exercise(symbolName: "figure.mind.and.body", name: "activity", intensity: "Medium", time: "6 min", instructions: "yes", image: Image("placeholderImage")))
+    @Previewable @State var defaultExercise = Exercise(symbolName: "", name: "", intensity: "", time: "", instructions: "", image: Image("placeholderImage"))
+    ActivitiesView(exercise: Exercise(symbolName: "figure.mind.and.body", name: "activity", intensity: "Medium", time: "6 min", instructions: "yes", image: Image("placeholderImage")), defaultExercise: $defaultExercise)
 }
