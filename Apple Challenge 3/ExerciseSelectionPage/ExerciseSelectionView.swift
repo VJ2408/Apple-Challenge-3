@@ -10,7 +10,7 @@ struct ExerciseSelectionView: View {
     
     let exercise: Exercise
     
-    @Binding var defaultExercise: Exercise
+    @Binding var defaultExercise: [Exercise]
     
     var greeting: String {Time.shared.greeting }
     var timeOfDay: String {Time.shared.timeOfDay }
@@ -141,6 +141,6 @@ struct ExerciseSelectionView: View {
 
 
 #Preview {
-    @Previewable @State var defaultExercise = Exercise(symbolName: "", name: "", intensity: "", time: "", instructions: "", image: Image("placeholderImage"))
+    @Previewable @State var defaultExercise = [Exercise(symbolName: "", name: "", intensity: "", time: "", instructions: "", image: Image("placeholderImage"))]
     ExerciseSelectionView(exercise: Exercise(symbolName: "figure.mind.and.body", name: "Default", intensity: "Medium", time: "3 min", instructions: "Placeholder", image: Image("placeholderImage")), defaultExercise: $defaultExercise)
 }
