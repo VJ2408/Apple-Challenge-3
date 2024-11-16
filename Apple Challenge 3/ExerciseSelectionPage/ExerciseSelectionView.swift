@@ -130,10 +130,10 @@ struct ExerciseSelectionView: View {
                     Color(uiColor: .systemGray6),
                     for: .navigationBar)
                 .toolbarBackground(.visible, for: .navigationBar)
+                .searchable(text: $searchText)
             }
             .background(Color(uiColor: .systemGray6))
         }
-        .searchable(text: $searchText)
     }
 }
 
