@@ -10,6 +10,7 @@ struct ActivitiesView: View {
     let exercise: Exercise
     
     @Binding var defaultExercise: Exercise
+    @State private var setDefaultAlertShowing: Bool = false
     
     var body: some View {
         NavigationStack{
@@ -62,6 +63,7 @@ struct ActivitiesView: View {
                     Button{
                         
                         defaultExercise = exercise
+                        setDefaultAlertShowing = true
                         
                     } label:{
                         ZStack{
@@ -77,6 +79,8 @@ struct ActivitiesView: View {
                         }
                     }
                     .padding(.bottom)
+                    .alert("Successfully set as default!", isPresented: $setDefaultAlertShowing) {
+                    }
                     
                     NavigationLink{
                         Activity()
