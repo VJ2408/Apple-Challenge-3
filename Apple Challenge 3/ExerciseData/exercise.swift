@@ -15,6 +15,7 @@ struct Exercise: Identifiable {
     let time: String
     let instructions : String
     var image: Image
+    let videoName: String
     
     var symbol: Image {
         Image(systemName: symbolName)
@@ -56,15 +57,15 @@ let morningHard = [
 ]
 
 let nightEz = [
-    Exercise(symbolName: "figure.mind.and.body", name: "Yoga", intensity: "Easy", time: "3 min", instructions: "Yololol", image: Image("placeholderImage")),
-    Exercise(symbolName: "figure.mind.and.body", name: "Running", intensity: "Easy", time: "3 min", instructions: "Yololol", image: Image("placeholderImage")),
-    Exercise(symbolName: "figure.mind.and.body", name: "Walking", intensity: "Easy", time: "3 min", instructions: "Yololol", image: Image("placeholderImage"))
+    Exercise(symbolName: "figure.mind.and.body", name: "Yoga", intensity: "Easy", time: "3 min", instructions: "Yololol", image: Image("placeholderImage"),videoName: "placeholderName"),
+    Exercise(symbolName: "figure.mind.and.body", name: "Running", intensity: "Easy", time: "3 min", instructions: "Yololol", image: Image("placeholderImage"),videoName: "placeholderName"),
+    Exercise(symbolName: "figure.mind.and.body", name: "Walking", intensity: "Easy", time: "3 min", instructions: "Yololol", image: Image("placeholderImage"),videoName: "placeholderName")
 ]
 
 let nightMid = [
-    Exercise(symbolName: "figure.mind.and.body", name: "Yoga", intensity: "Medium", time: "3 min", instructions: "Yololol", image: Image("placeholderImage")),
-    Exercise(symbolName: "figure.mind.and.body", name: "Running", intensity: "Medium", time: "3 min", instructions: "Yololol", image: Image("placeholderImage")),
-    Exercise(symbolName: "figure.mind.and.body", name: "Walking", intensity: "Medium", time: "3 min", instructions: "Yololol", image: Image("placeholderImage"))
+    Exercise(symbolName: "figure.mind.and.body", name: "Yoga", intensity: "Medium", time: "3 min", instructions: "Yololol", image: Image("placeholderImage"),videoName: "placeholderName"),
+    Exercise(symbolName: "figure.mind.and.body", name: "Running", intensity: "Medium", time: "3 min", instructions: "Yololol", image: Image("placeholderImage"),videoName: "placeholderName"),
+    Exercise(symbolName: "figure.mind.and.body", name: "Walking", intensity: "Medium", time: "3 min", instructions: "Yololol", image: Image("placeholderImage"),videoName: "placeholderName")
 ]
 
 let nightHard = [
