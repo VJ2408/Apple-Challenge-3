@@ -139,6 +139,7 @@ struct ExerciseSelectionView: View {
 
 
 #Preview {
-    @Previewable @State var defaultExercise = Exercise(symbolName: "", name: "", intensity: "", time: "", instructions: "", image: Image("placeholderImage"),videoName: "placeholderName")
+    @Previewable @State var defaultExercise = Exercise(symbolName: "questionmark", name: "You haven't set a default exercise yet!", intensity: "", time: "Tap on an exercise to set it as default!", instructions: "", image: Image("placeholderImage"), videoName: "placeholderName")
     ExerciseSelectionView(exercise: Exercise(symbolName: "figure.mind.and.body", name: "Default", intensity: "Medium", time: "3 min", instructions: "Placeholder", image: Image("placeholderImage"),videoName: "placeholderName"), defaultExercise: $defaultExercise)
 }
+
