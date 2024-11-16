@@ -55,24 +55,6 @@ let morningHard = [
     Exercise(symbolName: "figure.mind.and.body", name: "Walking", intensity: "Hard", time: "3 min", instructions: "Yololol", image: Image("placeholderImage")),
 ]
 
-let afternoonEz = [
-    Exercise(symbolName: "figure.mind.and.body", name: "Meditate", intensity: "Easy", time: "3 min", instructions: "Yololol", image: Image("placeholderImage")),
-    Exercise(symbolName: "figure.mind.and.body", name: "Running", intensity: "Easy", time: "3 min", instructions: "Yololol", image: Image("placeholderImage")),
-    Exercise(symbolName: "figure.walk", name: "Walking", intensity: "Easy", time: "3 min", instructions: "Yololol", image: Image("placeholderImage")),
-]
-
-let afternoonMid = [
-    Exercise(symbolName: "figure.mind.and.body", name: "Yoga", intensity: "Medium", time: "3 min", instructions: "Yololol", image: Image("placeholderImage")),
-    Exercise(symbolName: "figure.mind.and.body", name: "Running", intensity: "Medium", time: "3 min", instructions: "Yololol", image: Image("placeholderImage")),
-    Exercise(symbolName: "figure.mind.and.body", name: "Walking", intensity: "Medium", time: "3 min", instructions: "Yololol", image: Image("placeholderImage")),
-]
-
-let afternoonHard = [
-    Exercise(symbolName: "figure.mind.and.body", name: "Yoga", intensity: "Hard", time: "3 min", instructions: "Yololol", image: Image("placeholderImage")),
-    Exercise(symbolName: "figure.mind.and.body", name: "Running", intensity: "Hard", time: "3 min", instructions: "Yololol", image: Image("placeholderImage")),
-    Exercise(symbolName: "figure.mind.and.body", name: "Walking", intensity: "Hard", time: "3 min", instructions: "Yololol", image: Image("placeholderImage"))
-]
-
 let nightEz = [
     Exercise(symbolName: "figure.mind.and.body", name: "Yoga", intensity: "Easy", time: "3 min", instructions: "Yololol", image: Image("placeholderImage")),
     Exercise(symbolName: "figure.mind.and.body", name: "Running", intensity: "Easy", time: "3 min", instructions: "Yololol", image: Image("placeholderImage")),
@@ -93,5 +75,4 @@ let nightHard = [
 
 
 let MorningExercises = [ morningEz, morningMid, morningHard ]
-let AfternoonExercises = [ afternoonEz, afternoonMid, afternoonHard ]
 let EveningExercises = [ nightEz, nightMid, nightHard ]
