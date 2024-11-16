@@ -28,6 +28,7 @@
 		B06029DC2CE340F9000DC9BA /* ExerciseInfoPage */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ExerciseInfoPage; sourceTree = "<group>"; };
 		B06029DD2CE4EBE6000DC9BA /* ExerciseSelectionPage */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ExerciseSelectionPage; sourceTree = "<group>"; };
 		B06029F02CE5B651000DC9BA /* ExerciseDemo */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ExerciseDemo; sourceTree = "<group>"; };
+		BA5F7D122CE894A60036A6F1 /* New Folder */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "New Folder"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +77,7 @@
 		B0094FFE2C8551B70026A675 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				BA5F7D122CE894A60036A6F1 /* New Folder */,
 				B0094FFF2C8551B70026A675 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -101,6 +103,7 @@
 				B06029DC2CE340F9000DC9BA /* ExerciseInfoPage */,
 				B06029DD2CE4EBE6000DC9BA /* ExerciseSelectionPage */,
 				B06029F02CE5B651000DC9BA /* ExerciseDemo */,
+				BA5F7D122CE894A60036A6F1 /* New Folder */,
 			);
 			name = "Apple Challenge 3";
 			productName = "Apple Challenge 3";

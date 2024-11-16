@@ -6,13 +6,22 @@
 //
 
 import SwiftUI
+import AVKit
 
-struct Activity: View {
+struct ExerciseDemo: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "yoga", withExtension: "mp4")!)) {
+            VStack {
+                Text("Watermark")
+                    .foregroundStyle(.black)
+                    .background(.white.opacity(0.7))
+                Spacer()
+            }
+            .frame(width: 400, height: 300)
+        }
     }
 }
 
 #Preview {
-    Activity()
+    ExerciseDemo()
 }
