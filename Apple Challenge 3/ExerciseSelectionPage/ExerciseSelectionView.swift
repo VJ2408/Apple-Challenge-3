@@ -96,7 +96,7 @@ struct ExerciseSelectionView: View {
                                 ScrollView(.horizontal, showsIndicators: false) {
                                     HStack(spacing: 16) {
                                         ForEach(group.exercises) { exercise in
-                                            NavigationLink(destination: ActivitiesView(exercise: exercise, defaultExercise: defaultExercise)) {
+                                            NavigationLink(destination: ActivitiesView(exercise: exercise, defaultExercise: $defaultExercise)) {
                                                 VStack {
                                                     exercise.symbol
                                                         .foregroundColor(exercise.symbolColor)
