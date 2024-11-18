@@ -30,7 +30,7 @@ struct ActivitiesView: View {
                         .padding()
                         .frame(minHeight: 30, alignment: .leading)
                         .cornerRadius(8)
-                        .offset(x: -140, y: -110)
+                        .offset(x: -130, y: -110)
                     
                     HStack{
                         Text("Duration: \(exercise.time)")
@@ -39,15 +39,15 @@ struct ActivitiesView: View {
                             .frame(minHeight: 30)
                             .cornerRadius(8)
                             .lineLimit(1)
-                            .offset(x: -45, y: -100)
+                            .offset(x: -25, y: -100)
                         
                         Text("Intensity: \(exercise.intensity)")
                             .foregroundStyle(exercise.intensity == "Medium" ? Color(.black) : Color(.white))
                             .padding()
-                            .background(exercise.symbolColor)
+                            .background(exercise.intensitycolor)
                             .frame(minHeight: 30)
                             .cornerRadius(8)
-                            .offset(x: -45, y: -100)
+                            .offset(x: -25, y: -100)
                     }
                 }
                 VStack(alignment: .leading) {
@@ -78,12 +78,11 @@ struct ActivitiesView: View {
                                 .padding()
                         }
                     }
-                    .padding(.bottom)
                     .alert("Successfully set as default!", isPresented: $setDefaultAlertShowing) {
                     }
                     
                     NavigationLink{
-                        ExerciseDemo()
+                        ExerciseDemo(timerDuration: 300, exercise: exercise)
                     } label: {
                         ZStack{
                             RoundedRectangle(cornerRadius: 14)
@@ -96,10 +95,10 @@ struct ActivitiesView: View {
                                 .font(.title2)
                                 .padding(.horizontal)
                                 .bold()
-                                .padding(.bottom)
                         }
                     }
                 }
+                .padding(.bottom, 30)
                 .foregroundColor(Color(.systemGray4))
             }
             .ignoresSafeArea(.all)
@@ -108,6 +107,6 @@ struct ActivitiesView: View {
 }
 
 #Preview {
-    @Previewable @State var defaultExercise = Exercise(symbolName: "", name: "", intensity: "", time: "", instructions: "", image: Image("placeholderImage"),videoName: "placeholderName")
-    ActivitiesView(exercise: Exercise(symbolName: "figure.mind.and.body", name: "activity", intensity: "Medium", time: "6 min", instructions: "yes", image: Image("placeholderImage"),videoName: "placeholderName"), defaultExercise: $defaultExercise)
+    @Previewable @State var defaultExercise = Exercise(name: "", intensity: "", time: "", instructions: "", image: Image("placeholderImage"),videoName: "placeholderName")
+    ActivitiesView(exercise: Exercise( name: "Activity", intensity: "Medium", time: "6 min", instructions: "yes", image: Image(.yoga),videoName: "placeholderName"), defaultExercise: $defaultExercise)
 }

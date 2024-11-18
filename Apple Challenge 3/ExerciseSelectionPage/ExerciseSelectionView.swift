@@ -45,9 +45,10 @@ struct ExerciseSelectionView: View {
                             .padding(.top, 16)
                         
                             VStack {
-                                Image(systemName: defaultExercise.symbolName)
-                                    .font(.system(size: 60))
-                                    .frame(width: 80, height: 80)
+                                defaultExercise.image
+                                    .resizable()
+                                    .frame(width: 120, height: 120)
+                                    .padding()
                                 
                                 Text(defaultExercise.name)
                                     .font(.system(size: 16))
@@ -56,7 +57,7 @@ struct ExerciseSelectionView: View {
                                 HStack {
                                     Text(defaultExercise.intensity)
                                         .font(.system(size: 14))
-                                        .foregroundStyle(exercise.symbolColor)
+                                        .foregroundStyle(exercise.intensitycolor)
                                     
                                     Text(defaultExercise.time)
                                         .font(.system(size: 14))
@@ -83,7 +84,7 @@ struct ExerciseSelectionView: View {
                             VStack(alignment: .leading) {
                                 Text(group.intensity)
                                     .font(.system(size: 20, weight: .semibold))
-                                    .foregroundColor(Color.gray.opacity(0.7))
+                                    .foregroundColor(Color.gray.opacity(0.8))
                                     .padding([.leading, .trailing], 16)
                                     .padding(.top, 16)
                                 
@@ -95,11 +96,11 @@ struct ExerciseSelectionView: View {
                                     HStack(spacing: 16) {
                                         ForEach(group.exercises) { exercise in
                                             NavigationLink(destination: ActivitiesView(exercise: exercise, defaultExercise: $defaultExercise)) {
-                                                VStack {
-                                                    exercise.symbol
-                                                        .foregroundColor(exercise.symbolColor)
-                                                        .font(.system(size: 60))
-                                                    
+                                                exercise.image
+                                                    .resizable()
+                                                    .aspectRatio(contentMode:.fit)
+                                                    .frame(width: 50, height: 50)
+                                                        
                                                     HStack {
                                                         Text(exercise.name)
                                                             .font(.system(size: 14))
@@ -113,8 +114,8 @@ struct ExerciseSelectionView: View {
                                                     }
                                                 }
                                                 .padding()
-                                                .frame(minWidth: 165, minHeight: 120)
-                                                .background(Color(.white))
+                                                .frame(minWidth: 165, minHeight: 100)
+                                                .background(Color(.gray.opacity(0.1)))
                                                 .cornerRadius(8)
                                             }
                                         }
@@ -135,11 +136,11 @@ struct ExerciseSelectionView: View {
             .background(Color(uiColor: .systemGray6))
         }
     }
-}
+
 
 
 #Preview {
-    @Previewable @State var defaultExercise = Exercise(symbolName: "questionmark", name: "You haven't set a default exercise yet!", intensity: "", time: "Tap on an exercise to set it as default!", instructions: "", image: Image("placeholderImage"), videoName: "placeholderName")
-    ExerciseSelectionView(exercise: Exercise(symbolName: "figure.mind.and.body", name: "Default", intensity: "Medium", time: "3 min", instructions: "Placeholder", image: Image("placeholderImage"),videoName: "placeholderName"), defaultExercise: $defaultExercise)
+    @Previewable @State var defaultExercise = Exercise( name: "You haven't set a default exercise yet!", intensity: "", time: "Tap on an exercise to set it as default!", instructions: "", image: Image(.question), videoName: "placeholderName")
+    ExerciseSelectionView(exercise: Exercise( name: "Default", intensity: "Medium", time: "3 min", instructions: "Placeholder", image: Image(.yoga),videoName: "placeholderName"), defaultExercise: $defaultExercise)
 }
 
