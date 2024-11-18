@@ -12,6 +12,8 @@
 		B0094FFD2C8551B70026A675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0094FFC2C8551B70026A675 /* Assets.xcassets */; };
 		B00950002C8551B70026A675 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0094FFF2C8551B70026A675 /* Preview Assets.xcassets */; };
 		B06029E62CE4FCC2000DC9BA /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06029E52CE4FCC2000DC9BA /* Time.swift */; };
+		BAD41AD42CEAE56600440846 /* ExerciseDemoVideos.docc in Sources */ = {isa = PBXBuildFile; fileRef = BAD41AD12CEAE56600440846 /* ExerciseDemoVideos.docc */; };
+		BAD41AD52CEAE56600440846 /* ExerciseDemoVideos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD41AD22CEAE56600440846 /* ExerciseDemoVideos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,9 @@
 		B0094FFC2C8551B70026A675 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0094FFF2C8551B70026A675 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B06029E52CE4FCC2000DC9BA /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		BAD41AD02CEAE56600440846 /* ExerciseDemoVideos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExerciseDemoVideos.h; sourceTree = "<group>"; };
+		BAD41AD12CEAE56600440846 /* ExerciseDemoVideos.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ExerciseDemoVideos.docc; sourceTree = "<group>"; };
+		BAD41AD22CEAE56600440846 /* ExerciseDemoVideos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDemoVideos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -47,6 +52,7 @@
 			children = (
 				B0094FF72C8551B60026A675 /* Apple Challenge 3 */,
 				B0094FF62C8551B60026A675 /* Products */,
+				BAD41AD32CEAE56600440846 /* ExerciseDemoVideos */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +87,16 @@
 				B0094FFF2C8551B70026A675 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BAD41AD32CEAE56600440846 /* ExerciseDemoVideos */ = {
+			isa = PBXGroup;
+			children = (
+				BAD41AD02CEAE56600440846 /* ExerciseDemoVideos.h */,
+				BAD41AD12CEAE56600440846 /* ExerciseDemoVideos.docc */,
+				BAD41AD22CEAE56600440846 /* ExerciseDemoVideos.swift */,
+			);
+			path = ExerciseDemoVideos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +178,8 @@
 			files = (
 				B06029E62CE4FCC2000DC9BA /* Time.swift in Sources */,
 				B0094FFB2C8551B60026A675 /* ContentView.swift in Sources */,
+				BAD41AD42CEAE56600440846 /* ExerciseDemoVideos.docc in Sources */,
+				BAD41AD52CEAE56600440846 /* ExerciseDemoVideos.swift in Sources */,
 				B0094FF92C8551B60026A675 /* Apple_Challenge_3App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
