@@ -99,7 +99,7 @@ struct ExerciseSelectionView: View {
                                                 exercise.image
                                                     .resizable()
                                                     .aspectRatio(contentMode:.fit)
-                                                    .frame(width: 50, height: 50)
+                                                    .frame(width: 80, height: 80)
                                                         
                                                     HStack {
                                                         Text(exercise.name)
@@ -114,7 +114,7 @@ struct ExerciseSelectionView: View {
                                                     }
                                                 }
                                                 .padding()
-                                                .frame(minWidth: 165, minHeight: 100)
+                                                .frame(minWidth: 250, minHeight: 100)
                                                 .background(Color(.gray.opacity(0.1)))
                                                 .cornerRadius(8)
                                             }

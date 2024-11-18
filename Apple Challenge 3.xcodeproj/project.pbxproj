@@ -12,6 +12,7 @@
 		B0094FFD2C8551B70026A675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0094FFC2C8551B70026A675 /* Assets.xcassets */; };
 		B00950002C8551B70026A675 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0094FFF2C8551B70026A675 /* Preview Assets.xcassets */; };
 		B06029E62CE4FCC2000DC9BA /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06029E52CE4FCC2000DC9BA /* Time.swift */; };
+		B0E8D0E52CEB154C00756290 /* Apple Challenge 3.app in Resources */ = {isa = PBXBuildFile; fileRef = B0094FF52C8551B60026A675 /* Apple Challenge 3.app */; };
 		BAD41AD42CEAE56600440846 /* ExerciseDemoVideos.docc in Sources */ = {isa = PBXBuildFile; fileRef = BAD41AD12CEAE56600440846 /* ExerciseDemoVideos.docc */; };
 		BAD41AD52CEAE56600440846 /* ExerciseDemoVideos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD41AD22CEAE56600440846 /* ExerciseDemoVideos.swift */; };
 /* End PBXBuildFile section */
@@ -164,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E8D0E52CEB154C00756290 /* Apple Challenge 3.app in Resources */,
 				B00950002C8551B70026A675 /* Preview Assets.xcassets in Resources */,
 				B0094FFD2C8551B70026A675 /* Assets.xcassets in Resources */,
 			);

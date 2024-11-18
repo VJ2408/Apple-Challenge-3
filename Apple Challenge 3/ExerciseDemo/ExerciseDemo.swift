@@ -38,7 +38,7 @@ struct ExerciseDemo: View {
 
     let exercise: Exercise
     private var videoPlayer: AVPlayer? {
-        guard let url = Bundle.main.url(forResource: "ExerciseDemoVideos/placeholdername", withExtension: "mp4") else {
+        guard let url = Bundle.main.url(forResource: "ExerciseDemoVideos/ExerciseDemoVideos.docc/Resources/placeholdername.mp4", withExtension: "mp4") else {
             print("Error: Video URL not found")
             return nil
         }
