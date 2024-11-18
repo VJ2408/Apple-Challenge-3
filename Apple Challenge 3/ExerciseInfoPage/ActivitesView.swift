@@ -28,9 +28,11 @@ struct ActivitiesView: View {
                         .font(.title)
                         .fontWeight(.bold)
                         .padding()
-                        .frame(minHeight: 30, alignment: .leading)
+                        .frame(minHeight: 30, alignment: .center)
+                        .background(Color(.systemGray6))
+                        .lineLimit(1)
                         .cornerRadius(8)
-                        .offset(x: -130, y: -110)
+                        .offset(x: -18, y: -100)
                     
                     HStack{
                         Text("Duration: \(exercise.time)")
@@ -49,15 +51,29 @@ struct ActivitiesView: View {
                             .cornerRadius(8)
                             .offset(x: -25, y: -100)
                     }
+                    .padding(.bottom)
                 }
-                VStack(alignment: .leading) {
-                    Text("Instructions:")
-                        .multilineTextAlignment(.center)
-                        .font(.headline)
-                    Text(exercise.instructions)
-                        .lineLimit(nil)
+                
+                
+              .overlay(alignment: .top){
+                    VStack(alignment: .center) {
+                        Text("Instructions:")
+                            .padding(.top)
+                            .padding(.top)
+                            .padding(.top)
+                            .multilineTextAlignment(.center)
+                            .font(.headline)
+                        
+                        Text(exercise.instructions).fixedSize(horizontal: false, vertical: true)
+                            .lineLimit(nil)
+                        
+                        
+                    }
+                    
+                    
                 }
             }
+            
             .overlay(alignment:.bottom){
                 VStack{
                     Button{
