@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
             NavigationStack {
-                ExerciseSelectionView(exercise: Exercise( name: "Default excercise", intensity: "Easy", time: "- min", instructions: "This is a default excercise.", image: Image("placeholderImage"),videoName: "placeholderName"), defaultExercise: $defaultExercise)
+                ExerciseSelection(exercise: Exercise( name: "Default excercise", intensity: "medium", time: "- min", instructions: "This is a default excercise.", image: Image("placeholderImage"),videoName: "placeholderName"), defaultExercise: $defaultExercise)
             }
         }
     }

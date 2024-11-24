@@ -9,7 +9,8 @@
 import SwiftUI
 
 class Time {
-    static let shared = Time() 
+    static let shared = Time()
+    
     
     var greeting: String {
         let hour = Calendar.current.component(.hour, from: Date())
@@ -24,6 +25,7 @@ class Time {
         let hour = Calendar.current.component(.hour, from: Date())
         switch hour {
         case 0..<12: return "Morning"
+        case 12..<17: return "Morning"
         default: return "Evening"
         }
     }
@@ -35,3 +37,5 @@ class Time {
         }
     }
 }
+
+
