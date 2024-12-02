@@ -61,7 +61,7 @@ struct ExerciseSelection: View {
                         VStack(alignment: .leading, spacing: 16) {
                             Text("Default Activity")
                                 .font(.headline)
-                                .foregroundColor(.gray.opacity(0.9))
+                                .foregroundColor(.black.opacity(0.5))
                                 .padding([.leading, .trailing], 16)
                                 .padding(.top, 16)
                             
@@ -74,15 +74,16 @@ struct ExerciseSelection: View {
                                 Text(defaultExercise.name)
                                     .font(.subheadline)
                                     .fontWeight(.semibold)
+                                    .foregroundColor(.black)
                                 
                                 HStack {
                                     Text(defaultExercise.intensity)
                                         .font(.footnote)
-                                        .foregroundColor(.gray)
+                                        .foregroundColor(.black)
                                     
                                     Text(defaultExercise.time)
                                         .font(.footnote)
-                                        .foregroundColor(.gray)
+                                        .foregroundColor(.black)
                                 }
                                 .padding(.top, 8)
                             }
@@ -107,7 +108,7 @@ struct ExerciseSelection: View {
                                 VStack(alignment: .leading) {
                                     Text(group.intensity)
                                         .font(.headline)
-                                        .foregroundColor(.gray.opacity(0.9))
+                                        .foregroundColor(.black.opacity(0.5))
                                         .padding([.leading, .trailing], 16)
                                         .padding(.top, 16)
                                     
@@ -184,17 +185,17 @@ func backgroundGradient(for timeOfDay: String) -> some View {
 func gradientColors(for timeOfDay: String) -> [Color] {
     switch timeOfDay.lowercased() {
     case "morning":
-        // Morning gradient using RGB values
-        return [Color(red: 51/255, green: 131/255, blue: 202/255).opacity(0.6),
-                Color(red: 56/255, green: 116/255, blue: 151/255).opacity(0.6)] // Morning gradient with lower opacity
+        
+        return [Color(red: 51/255, green: 131/255, blue: 202/255).opacity(0.5),
+                Color(red: 56/255, green: 116/255, blue: 151/255).opacity(0.7)]
     case "evening":
-        // Evening gradient using RGB values
-        return [Color(red: 64/255, green: 104/255, blue: 217/255).opacity(0.4),
-                Color(red: 67/255, green: 46/255, blue: 140/255).opacity(0.6)] // Evening gradient with lower opacity
+        
+        return [Color(red: 64/255, green: 104/255, blue: 217/255).opacity(0.5),
+                Color(red: 67/255, green: 46/255, blue: 140/255).opacity(0.7)]
     default:
-        // Default gradient using RGB values
-        return [Color(red: 211/255, green: 211/255, blue: 211/255).opacity(0.6),
-                Color.white.opacity(0.6)] // Default gradient with lower opacity
+        
+        return [Color(red: 211/255, green: 211/255, blue: 211/255).opacity(0.7),
+                Color.white.opacity(0.7)]
     }
 }
 
@@ -205,7 +206,8 @@ func gradientColors(for timeOfDay: String) -> [Color] {
         time: "Tap on an exercise to set it as default!",
         instructions: "",
         image: Image("placeholder"), // Replace with your asset name
-        videoName: "placeholderName"
+        videoName: "placeholderName",
+        url: URL(string:"placeholder")!
     )
     ExerciseSelection(
         exercise: Exercise(
@@ -214,7 +216,8 @@ func gradientColors(for timeOfDay: String) -> [Color] {
             time: "10 minutes",
             instructions: "Placeholder Instructions",
             image: Image("stretch"), // Replace with your asset name
-            videoName: "stretchVideo"
+            videoName: "stretchVideo",
+            url: URL(string:"placeholder")!
         ),
         defaultExercise: $defaultExercise
     )

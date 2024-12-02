@@ -264,7 +264,8 @@ struct ExerciseCountdown: View {
         time: "10 min",
         instructions: "Do as many push-ups as possible within the time limit.",
         image: Image(systemName: "figure.walk"),
-        videoName: "pushups"
+        videoName: "pushups",
+        url: URL(string:"placeholder")!
     )
     ExerciseCountdown(exercise: sampleExercise)
 }
