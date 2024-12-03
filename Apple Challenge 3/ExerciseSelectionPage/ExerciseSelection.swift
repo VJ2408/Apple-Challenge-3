@@ -186,8 +186,8 @@ func gradientColors(for timeOfDay: String) -> [Color] {
     switch timeOfDay.lowercased() {
     case "morning":
         
-        return [Color(red: 51/255, green: 131/255, blue: 202/255).opacity(0.5),
-                Color(red: 56/255, green: 116/255, blue: 151/255).opacity(0.7)]
+        return [Color(red: 51/255, green: 140/255, blue: 202/255).opacity(0.5),
+                Color(red: 30/255, green: 70/255, blue: 140/255).opacity(0.7)]
     case "evening":
         
         return [Color(red: 64/255, green: 104/255, blue: 217/255).opacity(0.5),

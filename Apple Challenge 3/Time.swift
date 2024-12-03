@@ -26,7 +26,7 @@ class Time {
         switch hour {
         case 0..<12: return "Morning"
         case 12..<17: return "Morning"
-        default: return "Evening"
+        default: return "Morning"
         }
     }
     

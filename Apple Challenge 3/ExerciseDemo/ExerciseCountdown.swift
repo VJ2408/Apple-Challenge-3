@@ -142,8 +142,7 @@ struct ExerciseCountdown: View {
     
     var body: some View {
         ZStack{
-            backgroundGradient(for: timeOfDay)
-            
+            backgroundGradient(for: timeOfDay)            
             VStack(spacing: 40) {
                 Text(exercise.name)
                     .font(.system(size: 20, weight: .semibold))

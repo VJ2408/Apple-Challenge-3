@@ -11,7 +11,6 @@
 		B0094FFB2C8551B60026A675 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0094FFA2C8551B60026A675 /* ContentView.swift */; };
 		B0094FFD2C8551B70026A675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0094FFC2C8551B70026A675 /* Assets.xcassets */; };
 		B06029E62CE4FCC2000DC9BA /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06029E52CE4FCC2000DC9BA /* Time.swift */; };
-		B07E156F2CF08D4600B06068 /* Colour.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07E156E2CF08D4600B06068 /* Colour.swift */; };
 		B07E15712CF0D44C00B06068 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07E15702CF0D44C00B06068 /* Loading.swift */; };
 /* End PBXBuildFile section */
 
@@ -20,9 +19,8 @@
 		B0094FFA2C8551B60026A675 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B0094FFC2C8551B70026A675 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B06029E52CE4FCC2000DC9BA /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
-		B07E15512CEF8ACD00B06068 /* Apple Challenge 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Apple Challenge 3.app"; path = "/Users/vijai/Documents/GitHub Projects/Apple Challenge 3.4/Apple-Challenge-3/build/Debug-iphoneos/Apple Challenge 3.app"; sourceTree = "<absolute>"; };
-		B07E156E2CF08D4600B06068 /* Colour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colour.swift; sourceTree = "<group>"; };
 		B07E15702CF0D44C00B06068 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		B07E15932CFE0FA700B06068 /* Apple Challenge 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Challenge 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -47,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				B0094FF72C8551B60026A675 /* Apple Challenge 3 */,
+				B07E15932CFE0FA700B06068 /* Apple Challenge 3.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,7 +55,6 @@
 				B0094FF82C8551B60026A675 /* Apple_Challenge_3App.swift */,
 				B0094FFA2C8551B60026A675 /* ContentView.swift */,
 				B06029E52CE4FCC2000DC9BA /* Time.swift */,
-				B07E156E2CF08D4600B06068 /* Colour.swift */,
 				B07E15702CF0D44C00B06068 /* Loading.swift */,
 				B06029DD2CE4EBE6000DC9BA /* ExerciseSelectionPage */,
 				B06029DC2CE340F9000DC9BA /* ExerciseInfoPage */,
@@ -90,7 +88,7 @@
 			);
 			name = "Apple Challenge 3";
 			productName = "Apple Challenge 3";
-			productReference = B07E15512CEF8ACD00B06068 /* Apple Challenge 3.app */;
+			productReference = B07E15932CFE0FA700B06068 /* Apple Challenge 3.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -146,7 +144,6 @@
 				B0094FFB2C8551B60026A675 /* ContentView.swift in Sources */,
 				B07E15712CF0D44C00B06068 /* Loading.swift in Sources */,
 				B0094FF92C8551B60026A675 /* Apple_Challenge_3App.swift in Sources */,
-				B07E156F2CF08D4600B06068 /* Colour.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
